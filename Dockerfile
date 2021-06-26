@@ -2,7 +2,8 @@ FROM composer:2 as composer
 
 FROM php:8.0-apache
 
-RUN apt-get install -y $PHPIZE_DEPS \
+RUN apt-get update \
+        && apt-get install -y $PHPIZE_DEPS unzip \
         && rm -rf /var/lib/apt/lists/* \
         && pecl install redis \
         && docker-php-ext-enable redis \
