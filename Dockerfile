@@ -15,4 +15,6 @@ RUN apt-get update \
         && docker-php-ext-install sysvsem \
         && docker-php-ext-install sysvshm
 
+RUN a2enmod rewrite
+
 COPY --from=composer /usr/bin/composer /usr/bin/composer
