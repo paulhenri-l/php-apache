@@ -6,6 +6,7 @@ RUN apt-get update \
         && apt-get install -y $PHPIZE_DEPS unzip \
         && rm -rf /var/lib/apt/lists/* \
         && pecl install redis \
+        && docker-php-ext-enable apcu \
         && docker-php-ext-enable redis \
         && docker-php-ext-install bcmath \
         && docker-php-ext-install pdo_mysql \
