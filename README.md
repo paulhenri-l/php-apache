@@ -10,6 +10,7 @@ Composer is available at the /usr/bin/composer path.
 
 Here are the php extensions enabled.
 
+- apcu
 - bcmath
 - ctype
 - fileinfo
