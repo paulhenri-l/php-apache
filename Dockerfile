@@ -1,6 +1,6 @@
 FROM composer:2 as composer
 
-FROM php:8.0-apache
+FROM php:8.1-apache
 
 RUN apt-get update \
         && apt-get install -y $PHPIZE_DEPS unzip \
